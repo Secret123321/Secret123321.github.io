@@ -1,0 +1,1023 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Secretttt :V</title>
+        <link rel="icon" type="image/x-icon" href="imagefolder/kuro1.jpg">
+    </head>
+<style>
+    body{
+        background-image:url('imagefolder/lainbg.gif');
+        background-repeat:no-repeat;
+        background-size:cover;
+        background-attachment:fixed;
+        overflow-x:hidden;
+        margin:0;
+        padding:0;
+        cursor: url(imagefolder/Kanna.png),auto;
+    }
+    a, input{
+        cursor: url(imagefolder/kannaquestion.png),auto;
+    }
+    .fadein{
+        animation:fadeIn 3s;
+    }
+    #bgvideo{
+        position:fixed;
+        top:0;
+        left:0;
+        width:100vw;
+        height:100vh;
+        object-fit:cover;
+        z-index:-1;
+        filter:brightness(0.5);
+    }
+    .info, .music, .anime{
+        backdrop-filter: blur(6px);
+        opacity:80%;
+    }
+    .container{
+        transform: scale(1);
+        transform-origin:top-center;
+        position:absolute;
+        top:0;
+        left:50%;
+        width:1720px;
+        margin-top:-450px;
+    }
+    .info{
+        height:750px;
+        margin:auto;
+        width:80%;
+        background-color:rgb(16, 16, 16);
+        display:flex;
+        border-radius:20px;
+        flex-wrap:wrap;
+    }
+    .pfp{
+        height:400px;
+        width: 500px;
+        background-image:url('imagefolder/Bocchidance.gif');
+        background-size:cover;
+        background-position:center;
+        border-radius:20px;
+        margin-top:30px;
+        margin-left:30px;
+    }
+    .nameplate{
+        width:60%;
+        height:400px;
+        margin-top:30px;
+        margin-left:10px;
+    }
+    .secret{
+        font-size:200px;
+        margin-top:0px;
+        text-align:center;
+        color:#fff;
+        text-shadow: 0 0 5px;
+        font-family:'Coolvetica';
+        letter-spacing:10px;
+        animation: shadow-dance 2s infinite;
+    }
+    .secretinfo{
+        font-size:75px;
+        margin-top:-150px;
+        text-align:center;
+        color:white;
+        text-shadow: 0 0 5px;
+        font-family:'CoolveticaIT';
+        letter-spacing:20px;
+    }
+    .secretinfo span {
+        display:inline-block;
+        animation: wave 2s ease-in-out infinite;
+    }
+    .secretinfo span:nth-child(1) {
+        animation-delay:0s;
+    }
+    .secretinfo span:nth-child(2) {
+        animation-delay:0.2s;
+    }
+    .secretinfo span:nth-child(3) {
+        animation-delay:0.4s;
+    }
+    .secretinfo span:nth-child(4) {
+        animation-delay:0.6s;
+    }
+    .secretinfo span:nth-child(5) {
+        animation-delay:0.8s;
+    }
+    .secretinfo span:nth-child(6) {
+        animation-delay:1s;
+    }
+    .secretinfo span:nth-child(7) {
+        animation-delay:1.2s;
+    }
+    .secretinfo span:nth-child(8) {
+        animation-delay:1.4s;
+    }
+    .secretinfo span:nth-child(9) {
+        animation-delay:1s;
+    }
+    #flag{
+        height:60px;
+        aspect-ratio:16/9;
+        background-image:url('imagefolder/philippines.png');
+    }
+    .socialscontainer{
+        width:45%;
+        height:250px;
+        margin-left:30px;
+        display:flex;
+        flex-wrap:wrap;
+    }
+    .socials{
+        height:115px;
+        width:115px;
+        margin:0 10 0 10;
+    }
+    .mal{
+        background-image:url('imagefolder/mal.png');
+        background-position:center;
+        background-size:115px;
+        border-radius:15px;
+    }
+    .spotify{
+        background-image:url('imagefolder/spotify.png');
+        background-position:center;
+        background-size:115px;
+    }
+    .steam{
+        background-image:url('imagefolder/steam.png');
+        background-position:center;
+        background-size:115px;
+    }
+    .youtube{
+        background-image:url('imagefolder/youtube.webp');
+        background-position:center;
+        background-size:115px;
+    }
+    .insta{
+        background-image:url('imagefolder/insta.webp');
+        background-position:center;
+        background-size:115px;
+    }
+    .tiktok{
+        background-image:url('imagefolder/tiktok.webp');
+        background-position:center;
+        background-size:115px;
+    }
+    .discord{
+        background-image:url('imagefolder/discord.webp');
+        background-position:center;
+        background-size:115px;
+    }
+    .discordtag{
+        height:110px;
+        width:200px;
+        background-image:url('imagefolder/discordacc.png');
+        background-position:0 -18px;
+        background-size:cover;
+        background-repeat:no-repeat;
+        border-radius:20px;
+        border-width:5px;
+        border-style:solid;
+        border-color:rgb(70,70,70);
+        opacity:80%;
+    }
+    .bio{
+        height:310px;
+        width:650px;
+        background-color:pink;
+        margin-top:-40px;
+        border-radius:20px;
+        border-width:5px;
+        border-style:solid;
+        border-color:palevioletred;
+    }
+    .biotext{
+        font-family:sans-serif;
+        text-shadow: 0 0 5px;
+        color:white;
+        font-size:33.9px;
+        margin: 10px;
+        line-height:1.27;
+    }
+
+    .textbreak {
+        color:white;
+        height:50px;
+        width:80%;
+        margin:auto;
+        margin-top:50px;
+        font-size:40px;
+        font-family:'Coolvetica';
+    }
+
+
+    .music{
+        height:750px;
+        width:80%;
+        background: #ffa17f;
+        background: -webkit-linear-gradient(to right, #393939, #e3e3e3);
+        background: linear-gradient(to right, #393939, #e3e3e3);
+        overflow: hidden;
+        display:flex;
+        margin:auto;
+        margin-top:100px;
+        border-radius:20px;
+        flex-wrap:wrap;
+        flex-direction:column;
+        position:relative;
+    }
+    .star0 {
+        height: 1px;
+        width: 1px;
+        opacity: 1;
+        position: absolute;
+    }
+    .star1 {
+        height: 2px;
+        width: 2px;
+        border-radius: 50%;
+        opacity: 1;
+        position: absolute;
+    }
+    .star2 {
+        height: 3px;
+        width: 3px;
+        border-radius: 50%;
+        opacity: 1;
+        position: absolute;
+    }
+    .star3 {
+        height: 4px;
+        width: 4px;
+        border-radius: 50%;
+        opacity: 1;
+        position: absolute;
+    }
+    .textblock{
+        height:150px;
+        width:100%;
+        margin-left:auto;
+        margin-right:auto;
+        margin: top -20px;;
+        padding:20px 0;
+        z-index:2;
+    }
+    .headline{   
+        color:white;
+        width:1000px;
+        margin-left:auto;
+        margin-right:auto;
+        font-family:coolvetica;
+        font-size:100px;
+        text-align:center;
+        text-shadow:0 0 5px;
+        margin-top:0;
+        margin-bottom:0;
+    }
+    .movingtext{
+        color:white;
+        font-family:coolveticait;
+        font-size:50px;
+        text-align:center;
+        text-shadow:0 0 5px;
+        margin:0;
+    }
+    .movingtext span{
+        display:inline-block;
+        animation: wave 2s ease-in-out infinite;
+    }
+    .movingtext span:nth-child(1) {
+        animation-delay:0s;
+    }
+    .movingtext span:nth-child(2) {
+        animation-delay:0.2s;
+    }
+    .movingtext span:nth-child(3) {
+        animation-delay:0.4s;
+    }
+    .movingtext span:nth-child(4) {
+        animation-delay:0.6s;
+    }
+    .movingtext span:nth-child(5) {
+        animation-delay:0.8s;
+    }
+
+    .album{
+        width:167px;
+        aspect-ratio:1/1;
+        background-size:cover;
+        margin:0;
+    }
+    input{
+        width:167px;
+        aspect-ratio:1/1;
+        opacity:0%;
+    }
+    .allthings{
+        background-image:url(imagefolder/allthings.jpg);
+    }
+    .story{
+        background-image:url(imagefolder/story.jpg);
+    }
+    .sgtpeppers{
+        background-image:url(imagefolder/sgtpeppers.jpg);
+    }
+    .abbeyroad{
+        background-image:url(imagefolder/abbey.jpg);
+    }
+    .goblins{
+        background-image:url(imagefolder/goblins.jpg);
+    }
+    .loaded{
+        background-image:url(imagefolder/loaded.jpg);
+    }
+    .layla{
+        background-image:url(imagefolder/layla.jpg);
+    }
+    .four{
+        background-image:url(imagefolder/four.png);
+    }
+    .darkside{
+        background-image:url(imagefolder/dark.svg);
+    }
+    .college{
+        background-image:url(imagefolder/college.jpg);
+    }
+    .mellon{
+        background-image:url(imagefolder/mellon.jpg);
+    }
+    .siamese{
+        background-image:url(imagefolder/siamese.jpeg);
+    }
+    .mollusk{
+        background-image:url(imagefolder/mollusk.jpg);
+    }
+    .pablo{
+        background-image:url(imagefolder/pablo.jpg);
+    }
+    .pls{
+        background-image:url(imagefolder/pls.jpg);
+    }
+    .souvlaki{
+        background-image:url(imagefolder/souvlaki.jpg);
+    }
+    .bends{
+        background-image:url(imagefolder/bends.png);
+    }
+    .static{
+        background-image:url(imagefolder/static.jpg);
+    }
+    .disintegration{
+        background-image:url(imagefolder/disinteg.jpg);
+    }
+    .ladyland{
+        background-image:url(imagefolder/ladyland.jpg);
+    }
+    .doolittle{
+        background-image:url(imagefolder/doolittle.jpg);
+    }
+    .paranoid{
+        background-image:url(imagefolder/paranoid.jpg);
+    }
+    .pinkerton{
+        background-image:url(imagefolder/pinkerton.jpg);
+    }
+    .nevermind{
+        background-image:url(imagefolder/nevermind.jpg);
+    }
+    .albums{
+        display:flex;
+        flex-wrap:wrap;
+        gap:5px;
+        margin-top:30px;
+        position:relative;  
+    }
+
+
+    .anime{
+        height:750px;
+        width:80%;
+        display:flex;
+        margin:auto;
+        margin-bottom:200px;
+        margin-top:100px;
+        border-radius:20px;
+        flex-wrap:wrap;
+        overflow:hidden;
+    }
+    .gradanim {
+        background: linear-gradient(90deg, #c2c2c2, #ffbff3);
+        background: linear-gradient(315deg, rgba(101,0,94,1) 3%, rgba(60,132,206,1) 38%, rgba(48,238,226,1) 68%, rgba(255,25,25,1) 98%);
+        animation: gradient 15s ease infinite;
+        background-size: 400% 400%;
+        background-attachment: fixed;
+    }
+    .animecontainer{
+        height:70%;
+        width:95%;
+        margin:auto;
+    }
+    #animebillboard{
+        height:370px;
+        aspect-ratio:16/9;
+        background-size:cover;
+        background-repeat:no-repeat;
+        animation: changeBg 60s steps(1) infinite;
+        float:left;
+        margin-right:30px;
+        margin-bottom:0px;
+    }
+    .gifs{
+        height:180px;
+        aspect-ratio:1/1;
+        float:left;
+        margin:5px;
+        margin-top:0;
+        background-size:cover;
+        background-position:center;
+        background-repeat:no-repeat;
+    }
+    #gifs1{
+        animation:changeBg1 60s steps(1) infinite;
+    }
+    #gifs2{
+        animation:changeBg2 60s steps(1) infinite;
+    }
+    #gifs3{
+        animation:changeBg3 60s steps(1) infinite;
+    }
+    #gifs4{
+        animation:changeBg4 60s steps(1) infinite;
+    }
+    #gifs5{
+        animation:changeBg5 60s steps(1) infinite;
+    }
+    #gifs6{
+        animation:changeBg6 60s steps(1) infinite;
+    }
+    .sprite{
+        background-size:cover;
+        float:left;
+        margin:5px;
+        height:150px;
+        background-position:center;
+    }
+    #chie{
+        background-image:url(imagefolder/chie.gif);
+        aspect-ratio:2/3;
+    }
+    #teddie{
+        background-image:url(imagefolder/teddie.gif);
+        width:160px;
+    }
+    #kuroo{
+        background-image:url(imagefolder/kuronekosss.gif);
+        width:50px;
+        height:50px;
+    }
+    #aigis{
+        background-image:url(imagefolder/aigis.gif);
+        width:180px;
+    }
+    #akechi{
+        background-image:url(imagefolder/akechi.gif);
+        width:120px;
+    }
+    #robinfe{
+        background-image:url(imagefolder/robinfe.webp);
+        width:120px;
+    }
+    .wave {
+        border-radius: 1000% 1000% 0 0;
+        position: fixed;
+        width: 200%;
+        height: 12em;
+        animation: movingwave 10s -3s linear infinite;
+        transform: translate3d(0, 0, 0);
+        opacity: 0.8;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        background: rgb(255 255 255 / 25%);
+    }
+
+    .wave:nth-of-type(2) {
+        animation: movingwave 18s linear reverse infinite;
+        opacity: 0.8;
+        bottom: -1.25em;
+    }
+
+    .wave:nth-of-type(3) {
+        animation: movingwave 20s -1s reverse infinite;
+        opacity: 0.9;
+        bottom: -2.5em;
+    }
+    @keyframes movingwave {
+    2% {
+        transform: translateX(1);
+    }
+
+    25% {
+        transform: translateX(-25%);
+    }
+
+    50% {
+        transform: translateX(-50%);
+    }
+
+    75% {
+        transform: translateX(-25%);
+    }
+
+    100% {
+        transform: translateX(1);
+    }
+    }
+    @keyframes gradient {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+    }
+
+
+
+    @font-face{
+        font-family:'Coolvetica';
+        src:url('imagefolder/Coolvetica\ Rg.ttf')format('truetype');
+    }
+    @font-face{
+        font-family:'CoolveticaIT';
+        src:url('imagefolder/Coolvetica\ Rg\ It.ttf')format('truetype');
+    }
+    @keyframes wave {
+        0%, 100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-20px);
+        }
+    }
+    @keyframes shadow-dance {
+        0%, 100% {
+            text-shadow: 5px 5px 0 #808080;
+        }
+        50% {
+            text-shadow:-5px -5px 0 #808080;
+        }
+    }
+    @keyframes fadeIn{
+        from{opacity: 0;}
+        to{opacity: 1;}
+    }
+    @keyframes changeBg{
+        0%,100% {
+            background-image:url(imagefolder/kuronekowhite.gif);
+        }
+        25% {
+            background-image:url(imagefolder/reigif.gif);
+        }
+        50% {
+            background-image:url(imagefolder/laingif.gif);
+        }
+        75% {
+            background-image:url(imagefolder/megumingif.gif);
+        }
+    }
+    @keyframes changeBg1{
+        0%,100% {
+            background-image:url(imagefolder/gif1-1.gif);
+        }
+        25% {
+            background-image:url(imagefolder/gif1-2.gif);
+        }
+        50% {
+            background-image:url(imagefolder/gif1-3.gif);
+        }
+        75% {
+            background-image:url(imagefolder/gif1-4.gif);
+        }
+    }
+    @keyframes changeBg2{
+        0%,100% {
+            background-image:url(imagefolder/gif2-1.gif);
+        }
+        25% {
+            background-image:url(imagefolder/gif2-2.gif);
+        }
+        50% {
+            background-image:url(imagefolder/gif2-3.gif);
+        }
+        75% {
+            background-image:url(imagefolder/gif2-4.gif);
+        }
+    }
+    @keyframes changeBg3{
+        0%,100% {
+            background-image:url(imagefolder/gif3-1.gif);
+        }
+        25% {
+            background-image:url(imagefolder/gif3-2.gif);
+        }
+        50% {
+            background-image:url(imagefolder/gif3-3.gif);
+        }
+        75% {
+            background-image:url(imagefolder/gif3-4.gif);
+        }
+    }
+    @keyframes changeBg4{
+        0%,100% {
+            background-image:url(imagefolder/gif4-1.gif);
+        }
+        25% {
+            background-image:url(imagefolder/gif4-2.gif);
+        }
+        50% {
+            background-image:url(imagefolder/gif4-3.gif);
+        }
+        75% {
+            background-image:url(imagefolder/gif4-4.gif);
+        }
+    }
+    @keyframes changeBg5{
+        0%,100% {
+            background-image:url(imagefolder/gif5-1.gif);
+        }
+        25% {
+            background-image:url(imagefolder/gif5-2.gif);
+        }
+        50% {
+            background-image:url(imagefolder/gif5-3.gif);
+        }
+        75% {
+            background-image:url(imagefolder/gif5-4.gif);
+        }
+    }
+    @keyframes changeBg6{
+        0%,100% {
+            background-image:url(imagefolder/gif6-1.gif);
+        }
+        25% {
+            background-image:url(imagefolder/gif6-2.gif);
+        }
+        50% {
+            background-image:url(imagefolder/gif6-3.gif);
+        }
+        75% {
+            background-image:url(imagefolder/gif6-4.gif);
+        }
+    }
+</style>
+<body class="fadein">
+<video autoplay muted loop playsinline id="bgvideo">
+    <source src="imagefolder/lain.mp4" type="video/mp4">
+</video>
+<div class="container">
+    <div class="info">
+        <div class=pfp></div>
+        <div class="nameplate">
+            <h1 class="secret">Secret</h1>
+            <p class="secretinfo">
+                <span>1</span><span>5</span>
+                <span>y</span><span>/</span><span>o</span> 
+                <span>he</span><span>/</span><span>him</span>
+                <span><img id="flag" src="imagefolder/philippines.png"></span></p>
+        </div>
+        <div class="socialscontainer">
+            <a href="https://open.spotify.com/user/7fcmk4f68zxjg65udlv0uxw1m">  <div class="spotify socials"></div> </a>
+            <a href="https://www.youtube.com/@itsasecret123">   <div class="youtube socials"></div>    </a>
+            <a href="https://www.instagram.com/nikosvet1/?hl=en">   <div class="insta socials"></div>  </a>
+            <a href="https://www.tiktok.com/@itsasecret123321"> <div class="tiktok socials"></div>  </a>
+            <a href="https://steamcommunity.com/id/Secret123321"> <div class="steam socials"></div>  </a>
+            <a href="https://myanimelist.net/profile/itsasecret123321"> <div class="mal socials"></div>  </a>
+            <div onclick="toggleDiscord()" class="discord socials"></div>
+            <div id="discordtag" style="display:none;" class="discordtag"></div>
+        </div>
+        <div class="bio">
+            <div class="biotext">Hi, hi, hi hello! My name is Secret, my background consists of music obsession, games, and anime. Anyways, I don't know how to make friends
+                so I'm spending my time making this website (even though I'm pretty sure no one is gonna look at it).
+            </div>
+        </div>
+
+    </div>
+<div class="textbreak">Hey  , I'm pretty sure this entire thing will break if you are viewing on your phone, so if you are, please set it into desktop mode.</div>
+    <div class="music">
+        <div id="universe"></div>
+        <div class="textblock">
+        <div class="headline">☆Muzek☆</div>
+        <div class="movingtext">
+            <span>Artists</span> 
+            <span>/</span> 
+            <span>Albums</span> 
+            <span>I</span> 
+            <span>love</span>
+        </div>
+        </div>
+        <div class="albums">
+            <div class="album allthings">
+                <input type="button" value="" onclick="play('audio1')">
+            </div>
+            <div class="album story">
+                <input type="button" value="" onclick="play('audio2')">
+            </div>
+            <div class="album sgtpeppers">
+                <input type="button" value="" onclick="play('audio3')">
+            </div>
+            <div class="album abbeyroad">
+                <input type="button" value="" onclick="play('audio4')">
+            </div>
+            <div class="album goblins">
+                <input type="button" value="" onclick="play('audio5')">
+            </div>
+            <div class="album loaded">
+                <input type="button" value="" onclick="play('audio6')">
+            </div>
+            <div class="album layla">
+                <input type="button" value="" onclick="play('audio7')">
+            </div>
+            <div class="album four">
+                <input type="button" value="" onclick="play('audio8')">
+            </div>
+            <div class="album darkside">
+                <input type="button" value="" onclick="play('audio9')">
+            </div>
+            <div class="album college">
+                <input type="button" value="" onclick="play('audio10')">
+            </div>
+            <div class="album mellon">
+                <input type="button" value="" onclick="play('audio11')">
+            </div>
+            <div class="album siamese">
+                <input type="button" value="" onclick="play('audio12')">
+            </div>
+            <div class="album mollusk">
+                <input type="button" value="" onclick="play('audio13')">
+            </div>
+            <div class="album pablo">
+                <input type="button" value="" onclick="play('audio14')">
+            </div>
+            <div class="album pls">
+                <input type="button" value="" onclick="play('audio15')">
+            </div>
+            <div class="album souvlaki">
+                <input type="button" value="" onclick="play('audio16')">
+            </div>
+            <div class="album bends">
+                <input type="button" value="" onclick="play('audio17')">
+            </div>
+            <div class="album static">
+                <input type="button" value="" onclick="play('audio18')">
+            </div>
+            <div class="album disintegration">
+                <input type="button" value="" onclick="play('audio19')">
+            </div>
+            <div class="album ladyland">
+                <input type="button" value="" onclick="play('audio20')">
+            </div>
+            <div class="album doolittle">
+                <input type="button" value="" onclick="play('audio21')">
+            </div>
+            <div class="album paranoid">
+                <input type="button" value="" onclick="play('audio22')">
+            </div>
+            <div class="album pinkerton">
+                <input type="button" value="" onclick="play('audio23')">
+            </div>
+            <div class="album nevermind">
+                <input type="button" value="" onclick="play('audio24')">
+            </div>
+        </div>
+    </div>
+<div class="textbreak">click the albums lol :-) (it geniunely took me 6 hours to code it)</div>
+    
+    <div class="anime gradanim">
+        <div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+        </div>
+        <div class="textblock">
+        <div class="headline">☆Anime n Games☆</div>
+            <div class="movingtext">
+              <span>Anime</span> 
+               <span>/</span> 
+              <span>Games</span> 
+              <span>I</span> 
+              <span>love</span>
+            </div>
+        </div>
+        <div class="animecontainer">
+            <div id="animebillboard"></div>
+            <div class="gifs" id="gifs1"></div>
+            <div class="gifs" id="gifs2"></div>
+            <div class="gifs" id="gifs3"></div>
+            <div class="gifs" id="gifs4"></div>
+            <div class="gifs" id="gifs5"></div>
+            <div class="gifs" id="gifs6"></div>
+            <div class="sprite" id="chie"></div>
+            <div class="sprite" id="teddie"></div>
+            <div class="sprite" id="aigis"></div>
+            <div class="sprite" id="akechi"></div>
+            <div class="sprite" id="robinfe"></div>
+            <div class="sprite" id="kuroo"></div>
+            <div class="sprite" id="kuroo"></div>
+            <div class="sprite" id="kuroo"></div>
+            <div class="sprite" id="kuroo"></div>
+            <div class="sprite" id="kuroo"></div>
+            <div class="sprite" id="kuroo"></div>
+            <div class="sprite" id="kuroo"></div>
+            <div class="sprite" id="kuroo"></div>
+            <div class="sprite" id="kuroo"></div>
+            <div class="sprite" id="kuroo"></div>
+            <div class="sprite" id="kuroo"></div>
+            <div class="sprite" id="kuroo"></div>
+            <div class="sprite" id="kuroo"></div>
+            <div class="sprite" id="kuroo"></div>
+            <div class="sprite" id="kuroo"></div>
+            <div class="sprite" id="kuroo"></div>
+            <div class="sprite" id="kuroo"></div>
+            <div class="sprite" id="kuroo"></div>
+            <div class="sprite" id="kuroo"></div>
+            <div class="sprite" id="kuroo"></div>
+            <div class="sprite" id="kuroo"></div>
+            <div class="sprite" id="kuroo"></div>
+            <div class="sprite" id="kuroo"></div>
+            <div class="sprite" id="kuroo"></div>
+            <div class="sprite" id="kuroo"></div>
+            <div class="sprite" id="kuroo"></div>
+            <div class="sprite" id="kuroo"></div>
+        </div>
+    </div>
+</div>
+
+<audio id="audio1">
+    <source src="songs/allthings.mp3" type="audio/mpeg">
+</audio>
+<audio id="audio2">
+    <source src="songs/story.mp3" type="audio/mpeg">
+</audio>
+<audio id="audio3">
+    <source src="songs/peppers.mp3" type="audio/mpeg">
+</audio>
+<audio id="audio4">
+    <source src="songs/abbey.mp3" type="audio/mpeg">
+</audio>
+<audio id="audio5">
+    <source src="songs/goblins.mp3" type="audio/mpeg">
+</audio>
+<audio id="audio6">
+    <source src="songs/loaded.mp3" type="audio/mpeg">
+</audio>
+<audio id="audio7">
+    <source src="songs/layla.mp3" type="audio/mpeg">
+</audio>
+<audio id="audio8">
+    <source src="songs/four.mp3" type="audio/mpeg">
+</audio>
+<audio id="audio9">
+    <source src="songs/dark.mp3" type="audio/mpeg">
+</audio>
+<audio id="audio10">
+    <source src="songs/college.mp3" type="audio/mpeg">
+</audio>
+<audio id="audio11">
+    <source src="songs/mellon.mp3" type="audio/mpeg">
+</audio>
+<audio id="audio12">
+    <source src="songs/siamese.mp3" type="audio/mpeg">
+</audio>
+<audio id="audio13">
+    <source src="songs/mollusk.mp3" type="audio/mpeg">
+</audio>
+<audio id="audio14">
+    <source src="songs/pablo.mp3" type="audio/mpeg">
+</audio>
+<audio id="audio15">
+    <source src="songs/pls.mp3" type="audio/mpeg">
+</audio>
+<audio id="audio16">
+    <source src="songs/souvlaki.mp3" type="audio/mpeg">
+</audio>
+<audio id="audio17">
+    <source src="songs/bends.mp3" type="audio/mpeg">
+</audio>
+<audio id="audio18">
+    <source src="songs/static.mp3" type="audio/mpeg">
+</audio>
+<audio id="audio19">
+    <source src="songs/disintegration.mp3" type="audio/mpeg">
+</audio>
+<audio id="audio20">
+    <source src="songs/ladyland.mp3" type="audio/mpeg">
+</audio>
+<audio id="audio21">
+    <source src="songs/doolittle.mp3" type="audio/mpeg">
+</audio>
+<audio id="audio22">
+    <source src="songs/paranoid.mp3" type="audio/mpeg">
+</audio>
+<audio id="audio23">
+    <source src="songs/pinkerton.mp3" type="audio/mpeg">
+</audio>
+<audio id="audio24">
+    <source src="songs/nevermind.mp3" type="audio/mpeg">
+</audio>
+<script>
+    function toggleDiscord() {
+        const el = document.getElementById("discordtag");
+        el.style.display = (el.style.display === "none") ? "block" : "none";
+    }
+    function scaleSite() {
+    const baseWidth = 1920;
+    const baseHeight = 1080;
+
+    const scaleX = window.innerWidth / baseWidth;
+    const scaleY = window.innerHeight / baseHeight;
+
+    const scale = Math.min(scaleX, scaleY);
+
+    const container = document.querySelector(".container");
+
+    container.style.transform = `translate(-50%, 0) scale(${scale})`;
+
+    document.body.style.height = (container.offsetHeight * scale) + "px";
+}
+
+window.addEventListener("resize", scaleSite);
+window.addEventListener("load", scaleSite);
+
+var layerCount = 5;
+var starCount = 400;
+var maxTime = 30;
+var universe = document.getElementById("universe");
+var w = window;
+var d = document;
+var e = d.documentElement;
+var g = d.getElementsByTagName("body")[0];
+var width = w.innerWidth || e.clientWidth || g.clientWidth;
+var height = w.innerHeight || e.clientHeight || g.clientHeight;
+for (var i = 0; i < starCount; ++i) {
+  var ypos = Math.round(Math.random() * height);
+  var star = document.createElement("div");
+  var speed = 1000 * (Math.random() * maxTime + 1);
+  star.setAttribute("class", "star" + (3 - Math.floor(speed / 1000 / 8)));
+  star.style.backgroundColor = "white";
+
+  universe.appendChild(star);
+  star.animate(
+    [
+      {
+        transform: "translate3d(" + width + "px, " + ypos + "px, 0)"
+      },
+      {
+        transform:
+          "translate3d(-" + Math.random() * 256 + "px, " + ypos + "px, 0)"
+      }
+    ],
+    {
+      delay: Math.random() * -speed,
+      duration: speed,
+      iterations: 1000
+    }
+  );
+}
+
+var elem = document.querySelector(".pulse");
+var animation = elem.animate(
+  {
+    opacity: [0.5, 1],
+    transform: ["scale(0.5)", "scale(1)"]
+  },
+  {
+    direction: "alternate",
+    duration: 500,
+    iterations: Infinity
+  }
+);
+
+
+function play(element){
+    var audio = document.getElementById(element);
+    if(audio.paused){
+        audio.play()
+    } else {
+        audio.pause();
+        audio.currentTime=0;
+    }
+}
+
+
+
+</script>
+</body>
+</html>
