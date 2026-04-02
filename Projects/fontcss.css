@@ -1,0 +1,28 @@
+@font-face{
+    font-family:'Protest';
+    src:url('fonts/protest.ttf')format('truetype');
+}
+@font-face{
+    font-family:'CommerceB';
+    src:url('fonts/BasicCommerce-Bold.ttf')format('truetype');
+}
+@font-face{
+    font-family:'CommerceBI';
+    src:url('fonts/BasicCommerce-BoldItalic.ttf')format('truetype');
+}
+@font-face{
+    font-family:'CommerceL';
+    src:url('fonts/BasicCommerce-Light.ttf')format('truetype');
+}
+@font-face{
+    font-family:'CommerceLI';
+    src:url('fonts/BasicCommerce-LightItalic.ttf')format('truetype');
+}
+@font-face{
+    font-family:'Coolvetica';
+    src:url('fonts/Coolvetica\ Rg.ttf')format('truetype');
+}
+@font-face{
+    font-family:'CoolveticaI';
+    src:url('fonts/Coolvetica\ Rg\ It.ttf')format('truetype');
+}

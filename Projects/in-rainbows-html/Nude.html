@@ -1,0 +1,200 @@
+<html>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <title>Music Player</title>
+        <link rel="icon" type="image/x-icon" href="../Images-music/kuronekoicon.jpg">
+    </head>
+    <!--General Css-->
+    <link rel="stylesheet" href="../Music-Player.css">
+    <!--Animation css-->
+    <link rel="stylesheet" href="../animations.css">
+    <!--Font css-->
+    <link rel="stylesheet" href="../fontcss.css">
+    <script src="../Music-Player.js" async></script>
+    <style>
+        #universe{
+            background: #ffa17f;
+            background: -webkit-linear-gradient(to right, #ea8722, #0166a3);
+            background: linear-gradient(to right, #ea8722, #0166a3);
+        }
+        #nude{
+            box-shadow: 0 0 50px 15px #0166a3;
+        }
+    </style>
+<body>
+<div class="parent">
+    <div class="songlist" id="customscroll">
+        <div class="songoption gradanim" id="fifteenstep">
+            <img src="../Images-music/in-rainbows.jpg" class="songlist-albumcover">
+            <div class="songlist-albuminfo">
+                <h2 class="songlist-albumname">15 Step</h2>
+                <h4 class="songlist-artistname">Radiohead</h4>
+            </div>
+        </div>
+        <div class="songoption gradanim" id="bodysnatchers">
+            <img src="../Images-music/in-rainbows.jpg" class="songlist-albumcover">
+            <div class="songlist-albuminfo">
+                <h2 class="songlist-albumname">Bodysnatchers</h2>
+                <h4 class="songlist-artistname">Radiohead</h4>
+            </div>
+        </div>
+        <div class="songoption gradanim" id="nude">
+            <img src="../Images-music/in-rainbows.jpg" class="songlist-albumcover">
+            <div class="songlist-albuminfo">
+                <h2 class="songlist-albumname">Nude</h2>
+                <h4 class="songlist-artistname">Radiohead</h4>
+            </div>
+        </div>
+        <div class="songoption gradanim" id="weird-fishes">
+            <img src="../Images-music/in-rainbows.jpg" class="songlist-albumcover">
+            <div class="songlist-albuminfo">
+                <h2 class="songlist-albumname">Weird Fishes/Arpeggi</h2>
+                <h4 class="songlist-artistname">Radiohead</h4>
+            </div>
+        </div>
+        <div class="songoption gradanim" id="all-i-need">
+            <img src="../Images-music/in-rainbows.jpg" class="songlist-albumcover">
+            <div class="songlist-albuminfo">
+                <h2 class="songlist-albumname">All I Need</h2>
+                <h4 class="songlist-artistname">Radiohead</h4>
+            </div>
+        </div>
+        <div class="songoption gradanim" id="faust-arp">
+            <img src="../Images-music/in-rainbows.jpg" class="songlist-albumcover">
+            <div class="songlist-albuminfo">
+                <h2 class="songlist-albumname">Faust Arp</h2>
+                <h4 class="songlist-artistname">Radiohead</h4>
+            </div>
+        </div>
+        <div class="songoption gradanim" id="reckoner">
+            <img src="../Images-music/in-rainbows.jpg" class="songlist-albumcover">
+            <div class="songlist-albuminfo">
+                <h2 class="songlist-albumname">Reckoner</h2>
+                <h4 class="songlist-artistname">Radiohead</h4>
+            </div>
+        </div>
+        <div class="songoption gradanim" id="house-of-cards">
+            <img src="../Images-music/in-rainbows.jpg" class="songlist-albumcover">
+            <div class="songlist-albuminfo">
+                <h2 class="songlist-albumname">House Of Cards</h2>
+                <h4 class="songlist-artistname">Radiohead</h4>
+            </div>
+        </div>
+        <div class="songoption gradanim" id="jigsaw-falling-into-place">
+            <img src="../Images-music/in-rainbows.jpg" class="songlist-albumcover">
+            <div class="songlist-albuminfo">
+                <h2 class="songlist-albumname">Jigsaw Falling Into Place</h2>
+                <h4 class="songlist-artistname">Radiohead</h4>
+            </div>
+        </div>
+        <div class="songoption gradanim" id="videotape">
+            <img src="../Images-music/in-rainbows.jpg" class="songlist-albumcover">
+            <div class="songlist-albuminfo">
+                <h2 class="songlist-albumname">Videotape</h2>
+                <h4 class="songlist-artistname">Radiohead</h4>
+            </div>
+        </div>
+    </div>
+    <div class="container" id="universe">
+        <img id="displayImage" src="../Images-music/in-rainbows.jpg" alt="Selected Image">   
+        <div class="song-info">
+            <h1 id="songtitle" class="movingtext">
+                <span>Nude</span>
+            </h1>
+            <h3 id="songartist">Radiohead</h3>
+            <div class="playbackslider">
+                <input class="slider" id="seekSlider" type="range" min="0" max="100" value="0">
+            </div>
+            <div class="controls">
+                <img id="previous" class="control-icon" src="../Images-music/prev.png">
+                <img id="playpause" class="control-icon" src="Images-music/play.png">
+                <img id="next" class="control-icon" src="../Images-music/next.png">
+                <img id="loop" class="control-icon" src="../Images-music/loop.png">
+            </div>
+            <div class="volumecontrol">
+            <input class="slider" id="volumeslider" type="range" value="1" min="0" max="1" step="0.01" value="0.5">
+            </div>
+        </div>
+        <p id="loopstatus">Loop is off</p>
+        <a href="../Music-Player.html">
+            <p id="back-to-website">Go back to main player</p>
+        </a>
+    </div>
+</div>
+
+<audio id="audioPlayer" src="../songs/in-rainbows/Nude.mp3" preload="auto"></audio>
+
+<script>
+document.addEventListener('DOMContentLoaded', () =>{
+const previousBtn = document.getElementById('previous');
+const nextBtn = document.getElementById('next');
+const audio = document.getElementById('audioPlayer');
+
+// For previous button
+previousBtn.addEventListener('click', () => {
+    // Restart the song
+    audio.currentTime = 0;
+    // If you want to ensure it plays from start
+    if (audio.paused) {
+        audio.play();
+        playPauseBtn.src = 'Images-music/pause.png';
+    }
+});
+
+// Detect double click on previous button
+previousBtn.addEventListener('dblclick', () => {
+    window.location.href = 'Bodysnatchers.html'; // change to your page
+});
+
+// For next button
+nextBtn.addEventListener('click', () => {
+    window.location.href = 'WeirdFishes.html'; // change to your page
+});
+
+audio.addEventListener('ended', () => {
+    window.location.href = 'WeirdFishes.html';
+});
+
+document.getElementById('fifteenstep').addEventListener('click', () => {
+    window.location.href = '15-Step.html';
+});
+document.getElementById('bodysnatchers').addEventListener('click', () => {
+    window.location.href = 'Bodysnatchers.html';
+});
+document.getElementById('nude').addEventListener('click', () => {
+    window.location.href = 'Nude.html';
+});
+
+document.getElementById('weird-fishes').addEventListener('click', () => {
+    window.location.href = 'WeirdFishes.html';
+});
+
+document.getElementById('all-i-need').addEventListener('click', () => {
+    window.location.href = 'AllINeed.html';
+});
+
+document.getElementById('faust-arp').addEventListener('click', () => {
+    window.location.href = 'FaustArp.html';
+});
+
+document.getElementById('reckoner').addEventListener('click', () => {
+    window.location.href = 'Reckoner.html';
+});
+
+document.getElementById('house-of-cards').addEventListener('click', () => {
+    window.location.href = 'HouseOfCards.html';
+});
+
+document.getElementById('jigsaw-falling-into-place').addEventListener('click', () => {
+    window.location.href = 'JigsawFallingIntoPlace.html';
+});
+
+document.getElementById('videotape').addEventListener('click', () => {
+    window.location.href = 'Videotape.html';
+});
+
+});
+</script>
+</body>
+</html>
